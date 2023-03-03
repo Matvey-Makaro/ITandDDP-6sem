@@ -16,6 +16,7 @@ int main()
 		cerr << "Incorrect input. Try again." << endl;
 		return -1;
 	}
+
 	cout << "Enter another client port: ";
 	cin >> another_client_port;
 	if (cin.fail())

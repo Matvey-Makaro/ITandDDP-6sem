@@ -25,19 +25,6 @@ Client::~Client()
   TerminateThread(_request_messages_thread_handle, 0);
 }
 
-void Client::send_int(int number)
-{
-  _sock.send_to(_another_client_port, reinterpret_cast<const char*>(&number), sizeof(number));
-}
-
-int Client::recv_int()
-{
-  int number;
-  if(_sock.recv_from(reinterpret_cast<char*>(&number), sizeof(number)))
-    return number;
-  return 0;
-}
-
 void Client::send_message(string body)
 {
   stringstream ss;
@@ -87,9 +74,8 @@ void Client::get_new_messages()
         cout << _new_messages.back() << endl;
       }
     }
-    catch (const std::exception&)
+    catch (const std::exception& ex)
     {
-
     }
   }
 }

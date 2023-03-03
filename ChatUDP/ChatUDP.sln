@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Server", "Server\Server.vcxproj", "{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ChatUtils", "ChatUtils\ChatUtils.vcxproj", "{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\Client.vcxproj", "{E6CD654D-B0E3-456A-A16A-D3FC7C292ECB}"
 EndProject
 Global
@@ -17,22 +13,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}.Debug|x64.ActiveCfg = Debug|x64
-		{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}.Debug|x64.Build.0 = Debug|x64
-		{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}.Debug|x86.ActiveCfg = Debug|Win32
-		{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}.Debug|x86.Build.0 = Debug|Win32
-		{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}.Release|x64.ActiveCfg = Release|x64
-		{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}.Release|x64.Build.0 = Release|x64
-		{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}.Release|x86.ActiveCfg = Release|Win32
-		{A54EBF3E-6811-49AE-AEFA-97D1CDA998E9}.Release|x86.Build.0 = Release|Win32
-		{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}.Debug|x64.ActiveCfg = Debug|x64
-		{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}.Debug|x64.Build.0 = Debug|x64
-		{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}.Debug|x86.ActiveCfg = Debug|Win32
-		{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}.Debug|x86.Build.0 = Debug|Win32
-		{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}.Release|x64.ActiveCfg = Release|x64
-		{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}.Release|x64.Build.0 = Release|x64
-		{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}.Release|x86.ActiveCfg = Release|Win32
-		{CDEB69AC-86A2-4EA5-B90C-E8D872E06B3E}.Release|x86.Build.0 = Release|Win32
 		{E6CD654D-B0E3-456A-A16A-D3FC7C292ECB}.Debug|x64.ActiveCfg = Debug|x64
 		{E6CD654D-B0E3-456A-A16A-D3FC7C292ECB}.Debug|x64.Build.0 = Debug|x64
 		{E6CD654D-B0E3-456A-A16A-D3FC7C292ECB}.Debug|x86.ActiveCfg = Debug|Win32

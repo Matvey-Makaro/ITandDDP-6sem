@@ -19,15 +19,14 @@ private:
   void fill_addr_in();
   void init_sock();
   void fill_addr_in_other();
+  void off_block_recv();
 
 private:
-  std::string _host_name; // TODO: Проверить надо ли это вообще.
+  std::string _host_name;
   int _port;
-  std::string _address; // TODO: Проверить надо ли это вообще.
   SOCKADDR_IN _addr_in;
   size_t _addr_in_size;
   SOCKET _sock;
   mutable SOCKADDR_IN _addr_in_other;
   mutable int _addr_in_other_size;
 };
-

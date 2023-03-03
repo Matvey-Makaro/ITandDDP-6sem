@@ -35,7 +35,10 @@ void save_messages(const std::string& fname, const Messages& messages)
 {
   std::ofstream ofs(fname, std::ios::app);
   if (!ofs.is_open())
+  {
     std::cerr << "File " << fname << " doesn't open!" << std::endl;
+    return;
+  }
 
   for (const auto& msg : messages)
     ofs << msg.from << '\n' << msg.body << '\n';

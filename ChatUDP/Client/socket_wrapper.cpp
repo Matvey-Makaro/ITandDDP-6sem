@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "socket_wrapper.h"
 
 #include <utility>
@@ -11,7 +10,6 @@
 SocketWrapper::SocketWrapper(std::string host_name, int port) :
   _host_name(std::move(host_name)),
   _port(port),
-  _address(_host_name + ':' + std::to_string(_port)),
   _addr_in_size(sizeof(_addr_in)),
   _sock{ 0 },
   _addr_in_other_size(sizeof(_addr_in_other))
@@ -21,7 +19,7 @@ SocketWrapper::SocketWrapper(std::string host_name, int port) :
 SocketWrapper::~SocketWrapper()
 {
   closesocket(_sock);
-  // WSACleanup(); // TODO: Возможно это здесь не надо
+  WSACleanup();
 }
 
 void SocketWrapper::start()
@@ -29,11 +27,7 @@ void SocketWrapper::start()
   init_winsock_dll();
   fill_addr_in();
   init_sock();
-
-  BOOL l = TRUE;
-  if (ioctlsocket(_sock, FIONBIO, (unsigned long*)&l) == SOCKET_ERROR)
-    throw std::runtime_error("ioctlsocket error: " + std::to_string(WSAGetLastError()));
-
+  off_block_recv();
   fill_addr_in_other();
 }
 
@@ -42,7 +36,7 @@ bool SocketWrapper::recv_from(char* buf, int len) const
   auto recvResult = recvfrom(_sock, buf, len, 0, reinterpret_cast<sockaddr*>(&_addr_in_other), &_addr_in_other_size);
   if (recvResult == SOCKET_ERROR)
   {
-    if(WSAGetLastError() != WSAEWOULDBLOCK)
+    if (WSAGetLastError() != WSAEWOULDBLOCK)
       throw std::runtime_error("Recv error: " + std::to_string(WSAGetLastError()));
     return false;
   }
@@ -68,7 +62,7 @@ void SocketWrapper::init_winsock_dll() const
 
 void SocketWrapper::fill_addr_in()
 {
-  _addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
+  _addr_in.sin_addr.s_addr = inet_addr(_host_name.c_str());
   _addr_in.sin_port = htons(_port);
   _addr_in.sin_family = AF_INET;
 }
@@ -85,6 +79,13 @@ void SocketWrapper::init_sock()
 
 void SocketWrapper::fill_addr_in_other()
 {
-  _addr_in_other.sin_addr.s_addr = inet_addr("127.0.0.1");
+  _addr_in_other.sin_addr.s_addr = inet_addr(_host_name.c_str());
   _addr_in_other.sin_family = AF_INET;
+}
+
+void SocketWrapper::off_block_recv()
+{
+  BOOL l = TRUE;
+  if (ioctlsocket(_sock, FIONBIO, (unsigned long*)&l) == SOCKET_ERROR)
+    throw std::runtime_error("ioctlsocket error: " + std::to_string(WSAGetLastError()));
 }

@@ -12,9 +12,6 @@ public:
   Client(int port, std::string name, int another_client_port);
   ~Client();
   
-
-  void send_int(int number);
-  int recv_int();
   void send_message(std::string body);
   const Messages& get_new_msgs() const;
 
