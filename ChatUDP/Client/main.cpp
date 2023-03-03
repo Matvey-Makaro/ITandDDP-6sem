@@ -28,15 +28,15 @@ int main()
 	cout << "Enter your name: ";
 	cin >> client_name;
 
-	string fname = client_name + ".msg";
-	auto messages = read_messages(fname);
-
-	for (const auto& msg : messages)
-		cout << msg << '\n';
-
 	try
 	{
-		Client client(client_port, move(client_name), another_client_port);
+		Client client(client_port, client_name, another_client_port);
+
+		string fname = client_name + ".msg";
+		auto messages = read_messages(fname);
+		for (const auto& msg : messages)
+			cout << msg << '\n';
+
 		cin.ignore(SHRT_MAX, '\n');
 		while (true)
 		{
