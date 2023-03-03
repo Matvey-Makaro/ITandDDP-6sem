@@ -7,14 +7,22 @@
 using namespace std;
 
 Client::Client(int port, std::string name, int another_client_port) :
-  _sock("127.0.0.1", port), _name(move(name)), _another_client_port(another_client_port)
+  _sock("127.0.0.1", port), 
+  _name(move(name)), 
+  _another_client_port(another_client_port)
 {
   _sock.start(); 
 
-  thread requestMessagesThread([this]() {
+  thread request_messages_thread([this]() {
     get_new_messages();
     });
-  requestMessagesThread.detach();
+  request_messages_thread.detach();
+  _request_messages_thread_handle = request_messages_thread.native_handle();
+}
+
+Client::~Client()
+{
+  TerminateThread(_request_messages_thread_handle, 0);
 }
 
 void Client::send_int(int number)
@@ -30,12 +38,22 @@ int Client::recv_int()
   return 0;
 }
 
-void Client::send_message(const Message& message)
+void Client::send_message(string body)
 {
   stringstream ss;
-  ss << message.from << '\n' << message.to << '\n' << message.body;
+  ss << _name << '\n' << body;
   string str = ss.str();
-  _sock.send_to(_another_client_port, str.c_str(), str.size());
+  _sock.send_to(_another_client_port, str.c_str(), static_cast<int>(str.size()));
+
+  {
+    lock_guard g(_new_messages_mutex);
+    _new_messages.push_back(Message{ _name, move(body) });
+  }
+}
+
+const Messages& Client::get_new_msgs() const
+{
+  return _new_messages;
 }
 
 bool Client::recv_message()
@@ -47,24 +65,31 @@ bool Client::recv_message()
 
   stringstream ss(buf);
   Message message;
-  cout << message << endl;
+  ss >> message;
+  {
+    lock_guard g(_new_messages_mutex);
+    _new_messages.push_back(move(message));
+  }
 
   return true;
 }
 
 void Client::get_new_messages()
 {
-  // lock_guard g(_sock_mutex);
   while (true)
   {
     Sleep(100);
     try
     {
-      recv_message();
+      if(recv_message())
+      {
+        lock_guard g(_new_messages_mutex);
+        cout << _new_messages.back() << endl;
+      }
     }
     catch (const std::exception&)
     {
-      return; // Если сокет закрылся, то выкидывается исключение.
+
     }
   }
 }

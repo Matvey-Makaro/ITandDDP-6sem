@@ -37,7 +37,7 @@ void SocketWrapper::start()
   fill_addr_in_other();
 }
 
-bool SocketWrapper::recv_from(char* buf, int len)
+bool SocketWrapper::recv_from(char* buf, int len) const
 {
   auto recvResult = recvfrom(_sock, buf, len, 0, reinterpret_cast<sockaddr*>(&_addr_in_other), &_addr_in_other_size);
   if (recvResult == SOCKET_ERROR)
@@ -49,7 +49,7 @@ bool SocketWrapper::recv_from(char* buf, int len)
   return true;
 }
 
-void SocketWrapper::send_to(int other_port, const char* buf, int len)
+void SocketWrapper::send_to(int other_port, const char* buf, int len) const
 {
   _addr_in_other.sin_port = htons(other_port);
   _addr_in_other_size = sizeof(_addr_in_other);

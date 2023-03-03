@@ -10,22 +10,24 @@ class Client
 {
 public:
   Client(int port, std::string name, int another_client_port);
+  ~Client();
   
 
   void send_int(int number);
   int recv_int();
-  void send_message(const Message& message);
+  void send_message(std::string body);
+  const Messages& get_new_msgs() const;
 
 private:
   bool recv_message();
   void get_new_messages();
-
 
 private:
   SocketWrapper _sock;
   std::string _name;
   int _another_client_port;
   mutable std::mutex _new_messages_mutex;
-  std::vector<Message> _new_messages;
+  Messages _new_messages;
+  HANDLE  _request_messages_thread_handle;
 };
 

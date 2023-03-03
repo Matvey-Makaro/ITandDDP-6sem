@@ -10,8 +10,8 @@ public:
   ~SocketWrapper();
 
   void start();
-  bool recv_from(char* buf, int len);
-  void send_to(int other_port, const char* buf, int len);
+  bool recv_from(char* buf, int len) const;
+  void send_to(int other_port, const char* buf, int len) const;
 
 
 private:
@@ -27,7 +27,7 @@ private:
   SOCKADDR_IN _addr_in;
   size_t _addr_in_size;
   SOCKET _sock;
-  SOCKADDR_IN _addr_in_other;
-  int _addr_in_other_size;
+  mutable SOCKADDR_IN _addr_in_other;
+  mutable int _addr_in_other_size;
 };
 
