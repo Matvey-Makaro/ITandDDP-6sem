@@ -28,7 +28,7 @@ Sign Up page
 1. Authorisation
 2. Registration
 3. Read book
-4. Add/remove track to/from favorites.
+4. Add/remove book to/from favorites.
 5. Add/remove notes. 
 6. Search books by title and author.
 7. Edit profile (avatar and personal data)
