@@ -1,0 +1,13 @@
+.nav__items {
+    height: 3rem;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* grid-gap: 10px; */
+}

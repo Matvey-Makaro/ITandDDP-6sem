@@ -1,0 +1,15 @@
+.nav__ref-button {
+   /* box-sizing: border-box; */
+   width: 1rem;
+   height: 1rem;
+   padding: 1rem;
+   border: 1px solid #56A3A6;
+   margin: 1rem;
+   background-color: #56A3A6;
+   color: #FBFBF2;
+   text-decoration: none;
+}
+
+.nav__item:active .nav__ref-button{
+    background-color: #2B7085;
+}
