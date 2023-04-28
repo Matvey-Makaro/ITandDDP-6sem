@@ -1,0 +1,21 @@
+.user-inpt-area__button {
+    width: 100px;
+    height: 30px;
+    /* padding: 10px 50px; */
+    border: 1px solid #56A3A6;
+    /* margin: 10px 10px; */
+    background-color: #56A3A6;
+    color: #FBFBF2;
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 30px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 0;
+    font-size: 14px;
+    /* font-family: 'Roboto'; */
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

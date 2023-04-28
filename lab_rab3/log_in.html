@@ -4,14 +4,19 @@
     <title>Sign In</title>
     <meta charset="uft-8"/>
     <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="css/body/body.css">
     <link rel="stylesheet" href="css/nav/nav.css">
     <link rel="stylesheet" href="css/nav/__items/nav__items.css">
     <link rel="stylesheet" href="css/nav/__item/nav__item.css">
     <link rel="stylesheet" href="css/nav/__ref-button/nav__ref-button.css">
     <link rel="stylesheet" href="css/user-inpt-area/user-inpt-area.css">
+    <link rel="stylesheet" href="css/user-inpt-area/__h1/user-inpt-area__h1.css">
+    <link rel="stylesheet" href="css/user-inpt-area/__element/user-inpt-area__element.css">
+    <link rel="stylesheet" href="css/user-inpt-area/__input/user-inpt-area__input.css">
+    <link rel="stylesheet" href="css/user-inpt-area/__button/user-inpt-area__button.css">
     <link rel="stylesheet" href="css/content/content.css">
   </head>
-  <body>
+  <body class="body">
       <header class="header">
         <nav class="nav">
           <ul class="nav__items">
@@ -32,20 +37,23 @@
       </header>
     <main class="content">
       <section class="user-inpt-area">
-        <h1>Log In</h1>
+        <h1 class = "user-inpt-area__h1">Log In</h1>
         <form method="post" autocomplete="on">
-          <div class="sign__elem">
-              <input class="input" name="email" type="email" placeholder="email" id="signin-input-email" required autofocus>
+          <div class="user-inpt-area__element">
+              <input class="input user-inpt-area__input" name="email" type="email" placeholder="email" id="signin-input-email" required autofocus>
           </div>
-          <div class="sign__elem">
-              <input class="input" name="password" type="password" placeholder="password" id="signin-input-password" required>
+          <div class="user-inpt-area__element">
+              <input class="input user-inpt-area__input" name="password" type="password" placeholder="password" id="signin-input-password" required>
           </div>
-          <div class="sign__elem">
-              <button class="button button_type_primary" id="signin-button">
-                  Войти
+          <div class="user-inpt-area__element">
+              <button class="button user-inpt-area__button" id="signin-button">
+                  Log In
               </button>
           </div>
       </form>
+      <div class="user-inpt-area__element">
+        <a class="user-inpt-area__button" href="sign_up.html">Sign Up</a>
+      </div>
       </section>
     </main>
 
