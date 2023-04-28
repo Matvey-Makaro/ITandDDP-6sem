@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/nav/__items/nav__items.css">
     <link rel="stylesheet" href="css/nav/__item/nav__item.css">
     <link rel="stylesheet" href="css/nav/__ref-button/nav__ref-button.css">
+    <link rel="stylesheet" href="css/user-inpt-area/user-inpt-area.css">
+    <link rel="stylesheet" href="css/content/content.css">
   </head>
   <body>
       <header class="header">
@@ -28,7 +30,24 @@
           </ul>
         </nav>
       </header>
-
+    <main class="content">
+      <section class="user-inpt-area">
+        <h1>Log In</h1>
+        <form method="post" autocomplete="on">
+          <div class="sign__elem">
+              <input class="input" name="email" type="email" placeholder="email" id="signin-input-email" required autofocus>
+          </div>
+          <div class="sign__elem">
+              <input class="input" name="password" type="password" placeholder="password" id="signin-input-password" required>
+          </div>
+          <div class="sign__elem">
+              <button class="button button_type_primary" id="signin-button">
+                  Войти
+              </button>
+          </div>
+      </form>
+      </section>
+    </main>
 
   </body>
 </html>
