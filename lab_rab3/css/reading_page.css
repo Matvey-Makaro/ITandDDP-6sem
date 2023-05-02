@@ -1,0 +1,124 @@
+body{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    background: #FBFBF2;
+    margin:0px;
+    display: block;
+    text-align: center;
+  }
+  
+  
+  .main__books{
+    text-align:left;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  
+  .page-home__main{
+    width:75%;
+    margin:auto;
+    margin-top: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  
+    background: #2C2C34;
+    -moz-border-radius-topleft: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .book__text{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+  
+    color: #FFFFFF;
+  padding-left: 20px;
+  }
+  
+  .main__pages{
+    padding-bottom: 20px;
+  }
+  
+  .pages__buttons,.number-buttons{
+    display: flex;
+    justify-content: center;
+    /*justify-content: space-evenly;*/
+  }
+  
+  .previous-next-button,.number-button,.not-number-button{
+    background: #56A3A6;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    /* identical to box height */
+    text-align: center;
+    color: #FBFBF2;
+    width: 65px;
+    height: 35px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+  }
+  
+  .not-number-button{
+    background: transparent;
+  
+  }
+  
+  .previous-next-button{
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  
+  .star__image{
+    width: 35px;
+  }
+  
+  .comment__image{
+    width:150px;
+  
+  }
+  .comment__text{
+    margin-left: -150px;
+    position: inherit;
+    text-align: left;
+    padding-left: 8px;
+    padding-top: 8px;
+    font-size: 13px;
+    color: #FFFFFF;
+  }
+  
+  .comment{
+    position: absolute;
+    left: 50px;
+    top: 100px;
+  }
+  
+  .pages__buttons,.number-buttons{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /*justify-content: space-evenly;*/
+  }
+  /*Mobile version styles*/
+  @media screen and (max-width: 1000px) {
+    .previous-next-button,.number-button, .not-number-button{
+      margin-top: 20px;
+    }
+  
+    .previous-next-button{
+      min-width: 20px;
+    }
+  
+    .number-button, .not-number-button{
+      width: 30px;
+    }
+  }
+  
