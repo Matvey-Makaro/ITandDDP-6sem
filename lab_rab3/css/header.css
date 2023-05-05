@@ -55,21 +55,19 @@
   } */
   
   /*Mobile version styles*/
-  @media screen and (max-width: 1000px) {
+  /* @media screen and (max-width: 1000px) {
     .button__favorite, .button__books, .button__log-in, .button__sign-up{
       min-width: 60px;
       width:auto;
       padding-left: 10px;
       padding-right: 10px;
-      /*height: auto;*/
-      /*line-height: 20px;*/
       margin-left: 5px;
       margin-right: 5px;
     }
-  }
+  } */
   
-  .footer{
+  /* .footer{
     height: 60px;
     background: #2C2C34;
-  }
+  } */
   

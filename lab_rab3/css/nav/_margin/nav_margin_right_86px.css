@@ -1,3 +1,10 @@
 .nav__margin_right_86px {
     margin-right: 86px;
 }
+
+@media screen and (max-width: 1000px) {
+    .nav__margin_right_86px
+    {
+        margin-right: 5px;
+    }
+}

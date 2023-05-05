@@ -1,3 +1,10 @@
 .nav__float-left {
     float: left;
 }
+
+@media screen and (max-width: 1000px) {
+    .nav__float-left
+    {
+        float: auto
+    }
+}
