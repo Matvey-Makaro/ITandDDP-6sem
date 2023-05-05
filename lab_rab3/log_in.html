@@ -21,7 +21,12 @@
     <link rel="stylesheet" href="css/nav/_button-sign-modifier/nav__button-sign-modifier.css"/>
     <link rel="stylesheet" href="css/log-in-like-main/log-in-like-main.css"/>
     <link rel="stylesheet" href="css/log-in-like-header/log-in-like-header.css"/>
-
+    <link rel="stylesheet" href="css/log-in-like-form/log-in-like-form.css"/>
+    <link rel="stylesheet" href="css/log-in-like-form/__input-field/log-in-like-form__input-field.css"/>
+    <link rel="stylesheet" href="css/log-in-like-form/__submit-button/log-in-like-form__submit-button.css"/>
+    <link rel="stylesheet" href="css/log-in-like-form/__submit-button-text/log-in-like-form__submit-button-text.css"/>
+    <link rel="stylesheet" href="css/log-in-like-form/__footer/log-in-like-form__footer.css"/>
+    <link rel="stylesheet" href="css/log-in-like-form/__link/log-in-like-form__link.css"/>
 
     <!-- <script src="js/auth.js"></script> -->
   </head>
@@ -41,36 +46,33 @@
     </header>
     
     <main class="log-in-like-main">
-      <section class="main__auth-data">
+      <section>
         <header class="log-in-like-header">
           Log In
         </header>
-        <main class="auth-data__main">
-          <form class="main__form" action="profile.html" id="authForm" name="signin">
-            <input
-              class="form__input-field"
-              id="email"
-              type="email"
-              placeholder="Email"
-              required/>
-            <input
-              class="form__input-field"
-              id="password"
-              type="password"
-              placeholder="Password"
-              minlength="8"
-              required/><br>
-            <button class="form__submit-btn" type="submit">
-              <span class="submit-btn__text">Log In</span>
-            </button>
-            <footer class="auth-data__footer">
-              <a class="auth-data__footer__link" href="sign_up.html">
-                Sign Up
-              </a>
-            </footer>
-          </form>
-    
-        </main>
+        <form class="log-in-like-form" action="profile.html" id="authForm" name="signin">
+          <input
+            class="log-in-like-form__input-field"
+            id="email"
+            type="email"
+            placeholder="Email"
+            required/>
+          <input
+            class="log-in-like-form__input-field"
+            id="password"
+            type="password"
+            placeholder="Password"
+            minlength="8"
+            required/><br>
+          <button class="log-in-like-form__submit-button" type="submit">
+            <span class="log-in-like-form__submit-button-text">Log In</span>
+          </button>
+          <footer class="log-in-like-form__footer">
+            <a class="log-in-like-form__link" href="sign_up.html">
+              Sign Up
+            </a>
+          </footer>
+        </form>
       </section>
     </main>
   </body>

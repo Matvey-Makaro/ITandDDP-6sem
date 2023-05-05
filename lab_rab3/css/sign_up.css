@@ -21,7 +21,7 @@
     justify-content: center;
   } */
 
-  .auth-data__header{
+  /* .auth-data__header{
     width: 100%;
     border-radius: 10px;
     font-style: normal;
@@ -30,8 +30,7 @@
     text-align: center;
   
     color: #FFFFFF;
-    /*padding-top: 20px;*/
-  }
+  } */
   
   .form__input-field{
     width: 400px;
@@ -77,7 +76,7 @@
   }
   
   @media screen and (max-width: 1000px) {
-    .page-sign-up__main{
+    /* .page-sign-up__main{
       width: 80%;
       height: 400px;
     }
@@ -86,7 +85,7 @@
       text-align: center;
       padding: 0;
       margin: 0;
-    }
+    } */
   
     .form__input-field{
       width: 90%;

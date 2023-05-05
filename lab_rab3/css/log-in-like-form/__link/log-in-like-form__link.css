@@ -1,0 +1,24 @@
+.log-in-like-form__link {
+    text-decoration: none;
+  
+    width: 200px;
+    height: 30px;
+  
+    background: #56A3A6;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    /* identical to box height */
+  
+    text-align: center;
+  
+    color: #FBFBF2;
+  
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:10px;
+  
+}
