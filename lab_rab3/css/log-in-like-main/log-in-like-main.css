@@ -1,0 +1,20 @@
+.log-in-like-main{
+    width: 700px;
+    height: 400px;
+    background: #2C2C34;
+    border-radius: 10px;
+    margin:auto;
+    margin-top: 5%;
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .log-in-like-main{
+      width: 80%;
+      height: 400px;
+    }
+}

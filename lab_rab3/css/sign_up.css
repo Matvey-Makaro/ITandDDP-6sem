@@ -6,9 +6,8 @@
     display: block;
     text-align: center;
   } */
-  
-  
-  .page-sign-up__main{
+
+  /* .page-sign-up__main{
     width: 700px;
     height: 400px;
     background: #2C2C34;
@@ -20,8 +19,8 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-  }
-  
+  } */
+
   .auth-data__header{
     width: 100%;
     border-radius: 10px;
