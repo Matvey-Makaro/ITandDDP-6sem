@@ -21,6 +21,15 @@
   <link rel="stylesheet" href="css/nav/_button-sign-modifier/nav__button-sign-modifier.css"/>
   <link rel="stylesheet" href="css/log-in-like-main/log-in-like-main.css"/>
   <link rel="stylesheet" href="css/log-in-like-header/log-in-like-header.css"/>
+  <link rel="stylesheet" href="css/log-in-like-form/log-in-like-form.css"/>
+  <link rel="stylesheet" href="css/log-in-like-form/__input-field/log-in-like-form__input-field.css"/>
+  <link rel="stylesheet" href="css/log-in-like-form/__submit-button/log-in-like-form__submit-button.css"/>
+  <link rel="stylesheet" href="css/log-in-like-form/__submit-button-text/log-in-like-form__submit-button-text.css"/>
+  <link rel="stylesheet" href="css/log-in-like-form/__footer/log-in-like-form__footer.css"/>
+  <link rel="stylesheet" href="css/log-in-like-form/__link/log-in-like-form__link.css"/>
+  <link rel="stylesheet" href="css/log-in-like-form/_margin-top-25px/log-in-like-form__margin-top-25px.css"/>
+  <link rel="stylesheet" href="css/log-in-like-form/_margin-top-10px/log-in-like-form__margin-top-10px.css"/>
+
 </head>
 <body class="body body__text-align-center">
 
@@ -38,40 +47,37 @@
   </header>
 
 <main class="log-in-like-main">
-  <section class="main__auth-data">
+  <section>
     <header class="log-in-like-header">
       Settings
     </header>
-    <main class="auth-data__main">
-      <form class="main__form" action="profile.html" method="get" id="authForm" name="signin">
-        <input
-          class="form__input-field"
-          id="image"
-          type="file"
-          />
-        <input
-          class="form__input-field"
-          id="name"
-          placeholder="name"
-          />
-        <input
-          class="form__input-field"
-          id="date"
-          type="date"
-          placeholder="01.04.2003"
-          minlength="8"
-          /><br>
-        <button class="form__submit-btn" type="submit">
-          <b class="submit-btn__text">Confirm</b>
-        </button>
-        <footer class="auth-data__footer">
-          <a class="auth-data__footer__link" href="profile.html">
-            Back
-          </a>
-        </footer>
-      </form>
-
-    </main>
+    <form class="log-in-like-form" action="profile.html" method="get" id="authForm" name="signin">
+      <input
+        class="log-in-like-form__input-field"
+        id="image"
+        type="file"
+        />
+      <input
+        class="log-in-like-form__input-field"
+        id="name"
+        placeholder="name"
+        />
+      <input
+        class="log-in-like-form__input-field"
+        id="date"
+        type="date"
+        placeholder="01.04.2003"
+        minlength="8"
+        /><br>
+      <button class="log-in-like-form__submit-button log-in-like-form__margin-top-25px" type="submit">
+        <b class="log-in-like-form__submit-button-text">Confirm</b>
+      </button>
+      <footer class="log-in-like-form__footer log-in-like-form__margin-top-10px">
+        <a class="log-in-like-form__link" href="profile.html">
+          Back
+        </a>
+      </footer>
+    </form>
   </section>
 </main>
 </body>
