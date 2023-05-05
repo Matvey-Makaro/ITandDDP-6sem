@@ -1,0 +1,5 @@
+.nav__button-sign-modifier {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 40px;
+}

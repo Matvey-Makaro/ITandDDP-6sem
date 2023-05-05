@@ -1,0 +1,7 @@
+.nav__two-buttons{
+    display: flex;
+    align-items: center;
+    width:50%;
+    height:50px;
+    box-sizing: border-box;
+  }
