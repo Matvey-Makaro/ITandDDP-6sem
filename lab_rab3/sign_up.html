@@ -1,79 +1,61 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Sign Up</title>
-  <meta name="viewport" content="initial-scale=1, width=device-width"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/sign_up.css"/>
-  <link rel="stylesheet" href="css/body/body.css"/>
-  <link rel="stylesheet" href="css/body/_text-align-center/body__text-align-center.css"/>
-  <link rel="stylesheet" href="css/header/header.css"/>
-  <link rel="stylesheet" href="css/nav/nav.css"/>
-  <link rel="stylesheet" href="css/nav/__button/nav__button.css"/>
-  <link rel="stylesheet" href="css/nav/_margin/nav_margin_left_86px.css"/>
-  <link rel="stylesheet" href="css/nav/_margin/nav_margin_right_86px.css"/>
-  <link rel="stylesheet" href="css/nav/__two_buttons/nav__two-buttons.css"/>
-  <link rel="stylesheet" href="css/nav/_float/nav_float-left.css"/>
-  <link rel="stylesheet" href="css/nav/_float/nav_float-right.css"/>
-  <link rel="stylesheet" href="css/nav/_button-sign-modifier/nav__button-sign-modifier.css"/>
-  <link rel="stylesheet" href="css/log-in-like-main/log-in-like-main.css"/>
-  <link rel="stylesheet" href="css/log-in-like-header/log-in-like-header.css"/>
-  <link rel="stylesheet" href="css/log-in-like-form/log-in-like-form.css"/>
-  <link rel="stylesheet" href="css/log-in-like-form/__input-field/log-in-like-form__input-field.css"/>
-  <link rel="stylesheet" href="css/log-in-like-form/__submit-button/log-in-like-form__submit-button.css"/>
-  <link rel="stylesheet" href="css/log-in-like-form/__submit-button-text/log-in-like-form__submit-button-text.css"/>
-  <link rel="stylesheet" href="css/log-in-like-form/__footer/log-in-like-form__footer.css"/>
-  <link rel="stylesheet" href="css/log-in-like-form/__link/log-in-like-form__link.css"/>
-
+  <link rel="stylesheet" href="css/header.css"/>
 </head>
-<body class="body body__text-align-center">
+<body>
 
-  <header class="header">
-    <nav class="nav">
-      <div class="nav__two-buttons nav__float-left">
-        <a class="nav__button nav__margin_right_86px" href="home.html"> Books </a>
-        <a class="nav__button" href="home.html"> Favorite</a>
-      </div>
-      <div class="nav__two-buttons nav__float-right nav__button-sign-modifier">
-        <a class="nav__button" href="log_in.html">Log in</a>
-        <a class="nav__button nav__margin_left_86px" href="sign_up.html">Sign up</a>
-      </div>
-    </nav>
-  </header>
+<header class="header">
+  <nav class="nav">
+    <div class="buttons_home">
+      <a class="button__books" href="home.html"> Books </a>
+      <a class="button__favorite" href="home.html"> Favorite</a>
+    </div>
+    <div class="buttons_sign">
+      <a class="button__log-in" href="log_in.html">Log in</a>
+      <a class="button__sign-up" href="sign_up.html">Sign up</a>
+    </div>
+  </nav>
+</header>
 
-<main class="log-in-like-main">
-  <section>
-    <header class="log-in-like-header">
+<main class="page-sign-up__main">
+  <section class="main__auth-data">
+    <header class="auth-data__header">
       Sign Up
     </header>
-    <form class="log-in-like-form" action="profile.html" method="get" id="authForm" name="signin">
-      <input
-        class="log-in-like-form__input-field"
-        id="email"
-        type="email"
-        placeholder="Email"
-        required/>
-      <input
-        class="log-in-like-form__input-field"
-        id="pass"
-        type="password"
-        placeholder="Password"
-        minlength="8"
-        required/>
-      <input
-        class="log-in-like-form__input-field"
-        id="pass2"
-        type="password"
-        placeholder="Confirm password"
-        minlength="8"
-        required/><br>
-      <button class="log-in-like-form__submit-button" type="submit">
-        <span class="log-in-like-form__submit-button-text">Sign Up</span>
-      </button>
-    </form>
+    <main class="auth-data__main">
+      <form class="main__form" action="profile.html" method="get" id="authForm" name="signin">
+        <input
+          class="form__input-field"
+          id="email"
+          type="email"
+          placeholder="Email"
+          required/>
+        <input
+          class="form__input-field"
+          id="pass"
+          type="password"
+          placeholder="Password"
+          minlength="8"
+          required/>
+        <input
+          class="form__input-field"
+          id="pass2"
+          type="password"
+          placeholder="Confirm password"
+          minlength="8"
+          required/><br>
+        <button class="form__submit-btn" type="submit">
+          <b class="submit-btn__text">Sign Up</b>
+        </button>
+      </form>
+    </main>
   </section>
 </main>
 </body>

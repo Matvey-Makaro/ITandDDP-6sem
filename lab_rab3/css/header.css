@@ -1,0 +1,81 @@
+.nav{
+  display: flex;
+  /*width: 90%;*/
+  /*margin: auto;*/
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+header{
+  width: 100%;
+  background-color: #2C2C34;
+}
+
+.button__favorite, .button__books, .button__log-in, .button__sign-up{
+  background: #56A3A6;
+  border-radius: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 29px;
+  /* identical to box height */
+  text-align: center;
+  color: #FBFBF2;
+  width: 70px;
+  /*min-width: 90px;*/
+  height: 28px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button__books{
+  margin-right: 86px;
+}
+
+.button__sign-up{
+  margin-left: 86px;
+}
+
+.buttons_home, .buttons_sign{
+  display: flex;
+  align-items: center;
+  /*width:50%;*/
+  height:50px;
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+
+.buttons_home{
+  float: left;
+}
+
+.buttons_sign{
+  /*float: right;*/
+  /*flex-direction: row;*/
+  /*justify-content: flex-end;*/
+  /*padding-right: 40px;*/
+}
+
+/*Mobile version styles*/
+@media screen and (max-width: 1000px) {
+  .button__favorite, .button__books, .button__log-in, .button__sign-up{
+    min-width: 40px;
+    width:auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 30px;
+    line-height: 20px;
+    margin-left: 1px;
+    margin-right: 1px;
+    font-size: 11px;
+  }
+  .buttons_sign{
+    position: relative;
+    /*width:100%;*/
+  }
+}
+
+.footer{
+  height: 60px;
+  background: #2C2C34;
+}
