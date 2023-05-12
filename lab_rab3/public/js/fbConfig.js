@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyDCyozQ-58--rjprF8bOo3jgMX2sj1R2Gc",
-    authDomain: "bookstore-35a4d.firebaseapp.com",
-    databaseURL: "https://bookstore-35a4d-default-rtdb.firebaseio.com",
-    projectId: "bookstore-35a4d",
-    storageBucket: "bookstore-35a4d.appspot.com",
-    messagingSenderId: "447708340675",
-    appId: "1:447708340675:web:eab111ad42d66f05261d76"
-};
+    apiKey: "AIzaSyBKN2nI7Hj3pg59TjJXGtjJLM81vhipaa8",
+    authDomain: "library-47757.firebaseapp.com",
+    databaseURL: "https://library-47757-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "library-47757",
+    storageBucket: "library-47757.appspot.com",
+    messagingSenderId: "354525266614",
+    appId: "1:354525266614:web:3382ebf99b871a54151c17"
+  };
 
 export default firebaseConfig;
