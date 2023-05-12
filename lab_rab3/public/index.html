@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookstore</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__row">
+        <div class="header__col">
+          <nav class="header__navigation navigation">
+            <a href="index.html" class="main-btn navigation__item">Books</a>
+            <a href="favourite.html" class="main-btn navigation__item">Favorite</a>
+            <a href="search.html" class="main-btn navigation__item">Search</a>
+          </nav>
+        </div>
+        <div class="header__col">
+          <div class="autho-wrap">
+            <nav class="header__authorization authorization">
+              <a href="log-in.html" class="main-btn authorization__item">Log In</a>
+              <a href="sign-up.html" class="main-btn authorization__item">Sign Up</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="books">
+        <div class="books__wrapper">
+          <div class="books__cards">
+          </div>
+          <div class="books__buttons buttons">
+            <div class="buttons__row">
+              <div class="buttons__col">
+                <div class="buttons__col-left main-btn">&lt;</div>
+              </div>
+              <div class="buttons__col">
+                <div class="buttons__col-pages pages">
+                  <div class="pages__item pages__item-selected main-btn">1</div>
+                  <div class="pages__item main-btn">...</div>
+                  <div class="pages__item pages__item-last main-btn">48</div>
+                </div>
+              </div>
+              <div class="buttons__col">
+                <div class="buttons__col-right main-btn">&gt;</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"></footer>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/firebase.js" type="module"></script>
+  <script>
+  </script>
+</body>
+
+</html>

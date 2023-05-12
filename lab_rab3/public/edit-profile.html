@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookstore</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__row">
+        <div class="header__col">
+          <nav class="header__navigation navigation">
+            <a href="index.html" class="main-btn navigation__item">Books</a>
+            <a href="favourite.html" class="main-btn navigation__item">Favorite</a>
+            <a href="search.html" class="main-btn navigation__item">Search</a>
+          </nav>
+        </div>
+        <div class="header__col">
+          <div class="autho-wrap">
+            <nav class="header__authorization authorization">
+              <a href="log-in.html" class="main-btn authorization__item">Log In</a>
+              <a href="sign-up.html" class="main-btn authorization__item">Sign Up</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="form">
+        <div class="form__wrapper">
+          <div class="form__title">Settings</div>
+          <form id="edit-user-form">
+            <input type="text" name="email" id="edit-email" placeholder="email" class="mb-46">
+            <input type="text" name="username" id="edit-username" placeholder="user name" class="mb-46">
+            <input type="date" name="birthday" id="edit-birthday" class="mb-46">
+            <input type="text" name="avatar" id="edit-avatar" placeholder="url to user avatar">
+            <button type="submit" class="mt-57">Confirm</button>
+            <a href="profile.html" class="main-btn">Back</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"></footer>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/firebase.js" type="module"></script>
+  <script src="js/profile.js" type="module"></script>
+</body>
+
+</html>
