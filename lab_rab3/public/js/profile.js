@@ -65,3 +65,10 @@ function updateform(user) {
         console.error(error);
     });
 }
+
+
+// if (document.querySelector("#logout-btn")) {
+//     document.querySelector("#logout-btn").addEventListener("click", (e) => {
+//         window.location.replace("index.html");
+//     }
+// }

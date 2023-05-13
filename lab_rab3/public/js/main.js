@@ -286,12 +286,12 @@ async function displayBookText(bookId) {
 
         if (element) {
             const range = document.createRange();
-            const textNode = element.firstChild;
+            const textNode = element.lastChild;
 
             range.setStart(textNode, start);
             range.setEnd(textNode, start + length);
             const span = document.createElement('span');
-            span.style.backgroundColor = '#BEB24C';
+            span.classList.add("mark-yellow");
             range.surroundContents(span);
         }
     }
@@ -469,6 +469,9 @@ function addToFavorite(bookId) {
                 console.error(error);
             });
         }
+        else {
+            alert("You cannot add to favorites until you are logged in.");
+        }
     });
 }
 
@@ -496,6 +499,7 @@ function highlightTextHandler(selector, page, bookId) {
             const endContainer = range.endContainer;
             const endOffset = range.endOffset;
             selectionStart = { container: startContainer, offset: startOffset };
+            console.log(selectionStart);
             selectionEnd = { container: endContainer, offset: endOffset };
             selectionLength = selectedText.length;
             range.deleteContents();

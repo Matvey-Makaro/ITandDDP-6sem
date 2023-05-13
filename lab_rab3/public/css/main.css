@@ -205,6 +205,7 @@ header {
 }
 
 .form__wrapper input[type="text"],
+.form__wrapper input[type="password"],
 .form__wrapper input[type="date"] {
     background: #FBFBF2;
     border-radius: 10px;
@@ -218,7 +219,9 @@ header {
     font-family: 'Inter', sans-serif;
 }
 
-.form__wrapper input[type="text"]::placeholder {
+.form__wrapper input[type="text"]::placeholder,
+.form__wrapper input[type="password"]::placeholder
+ {
     color: #8D8C95;
 }
 
@@ -441,6 +444,7 @@ img#edit-avatar {
     }
 
     .form__wrapper input[type="text"],
+    .form__wrapper input[type="password"],
     .form__wrapper input[type="date"] {
         min-width: unset;
     }
@@ -571,4 +575,8 @@ img#edit-avatar {
         font-size: 16px;
         line-height: 18px;
     }
+}
+
+.mark-yellow {
+    background: #BEB24C;
 }

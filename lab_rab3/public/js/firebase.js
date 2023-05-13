@@ -80,7 +80,7 @@ onAuthStateChanged(auth, (user) => {
                 document.querySelector("#logout-btn").addEventListener("click", (e) => {
                     signOut(auth).then(() => {
                         alert("signed out");
-                        location.reload();
+                        window.location.replace("index.html");
                     }).catch((error) => {
                         alert(error);
                     });
