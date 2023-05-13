@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookstore</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__row">
+        <div class="header__col">
+          <nav class="header__navigation navigation">
+            <a href="index.html" class="main-btn navigation__item">Books</a>
+            <a href="favourite.html" class="main-btn navigation__item">Favorite</a>
+            <a href="search.html" class="main-btn navigation__item">Search</a>
+          </nav>
+        </div>
+        <div class="header__col">
+          <div class="autho-wrap">
+            <nav class="header__authorization authorization">
+              <a href="log-in.html" class="main-btn authorization__item">Log In</a>
+              <a href="sign-up.html" class="main-btn authorization__item">Sign Up</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="form">
+        <div class="form__wrapper">
+          <div class="form__title">Sign Up</div>
+          <form id="register-form">
+            <input type="text" name="email" id="register-email" placeholder="email" class="mb-46">
+            <input type="password" name="password" id="register-password" placeholder="password" class="mb-46">
+            <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password"
+              class="mb-35">
+            <button type="submit" class="form__signup register-button" href="">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"></footer>
+  <script src="js/main.js" type="module"></script>
+  <script src="js/profile.js" type="module"></script>
+  <script src="js/firebase.js" type="module"></script>
+</body>
+
+</html>
